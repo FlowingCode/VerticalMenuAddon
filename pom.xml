@@ -4,7 +4,7 @@
 
     <groupId>com.flowingcode.addons</groupId>
     <artifactId>vertical-menu</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Vertical Menu Addon</name>
     <description>Colorful vertical menu for Vaadin 10</description>
     
@@ -20,7 +20,7 @@
         <url>https://github.com/FlowingCode/VerticalMenuAddon</url>
         <connection>scm:git:git://github.com/FlowingCode/VerticalMenuAddon.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/FlowingCode/VerticalMenuAddon.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>vertical-menu-1.0.0</tag>
     </scm>
 	
     <organization>
