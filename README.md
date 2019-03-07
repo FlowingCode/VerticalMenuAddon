@@ -38,7 +38,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 
 Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-RssItems Addon is written by Flowing Code S.A.
+VerticalMenu Addon is written by Flowing Code S.A.
 
 
 # Developer Guide
