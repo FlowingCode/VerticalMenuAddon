@@ -1,5 +1,6 @@
 package com.flowingcode.vaadin.addons.verticalmenu;
 
+import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
@@ -44,6 +45,12 @@ public class VerticalMenu extends Component implements HasSize {
 		UI.getCurrent().getPage().executeJavaScript("goToPage(0)");
 	}
 
+	@Override
+	protected void onAttach(AttachEvent attachEvent) {
+		super.onAttach(attachEvent);
+		getUI().ifPresent(ui->ui.getElement().getClassList().add("vertical-menu"));
+	}
+	
 	@SuppressWarnings("unchecked")
 	private void addMenu(Section s, int index) {
 		s.getElement().setAttribute("onclick", "goToPage(" + (index-1) + ")");

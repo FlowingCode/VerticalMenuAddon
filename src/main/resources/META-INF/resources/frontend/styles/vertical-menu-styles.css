@@ -3,21 +3,18 @@
   -webkit-font-smoothing: antialiased;
 }
 
-html {
-}
-
-body {
+body.vertical-menu {
   background: #1f252d;
 }
 
-.wrapper {
+.vertical-menu .wrapper {
   height: 1000px;
   background: #2e394b;
   overflow: hidden;
   position: relative;
 }
 
-.menu-btn {
+.vertical-menu .menu-btn {
   position: absolute;
   z-index: 10;
   top: 24px;
@@ -26,11 +23,12 @@ body {
   background-size: 44px;
   color: white;
 }
-.menu-btn:active {
+
+.vertical-menu .menu-btn:active {
   opacity: 0.2;
 }
 
-section {
+.vertical-menu section {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,35 +37,36 @@ section {
   border-radius: 8px 8px 0 0;
   -webkit-transition: -webkit-transform 0.3s;
 }
-section.class1 {
+
+.vertical-menu section.class1 {
   background: #f75b5b;
   -webkit-transition-delay: 0s;
 }
-section.class2 {
+.vertical-menu section.class2 {
   background: #c84051;
   -webkit-transition-delay: 0.05s;
 }
-section.class3 {
+.vertical-menu section.class3 {
   background: #4f3462;
   -webkit-transition-delay: 0.1s;
 }
-section.class4 {
+.vertical-menu section.class4 {
   background: #794d9a;
   -webkit-transition-delay: 0.15s;
 }
-section.class5 {
+.vertical-menu section.class5 {
   background: #c84051;
   -webkit-transition-delay: 0.20s;
 }
-section.class6 {
+.vertical-menu section.class6 {
   background: #4f3462;
   -webkit-transition-delay: 0.25s;
 }
-section.after {
+.vertical-menu section.after {
   -webkit-transform: translateY(100%);
 }
 
-h1 {
+.vertical-menu h1 {
   color: white;
   font-weight: 500;
   font-size: 1.3em;
