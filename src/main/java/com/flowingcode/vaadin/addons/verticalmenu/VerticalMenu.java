@@ -69,7 +69,7 @@ public class VerticalMenu extends Component implements HasSize {
         return addListener(MenuSelectedEvent.class, listener);
     }
 	
-	public class MenuSelectedEvent extends ComponentEvent<Section> {
+	public static class MenuSelectedEvent extends ComponentEvent<Section> {
 	    public MenuSelectedEvent(Section source, boolean fromClient) {
 	        super(source, fromClient);
 	    }
