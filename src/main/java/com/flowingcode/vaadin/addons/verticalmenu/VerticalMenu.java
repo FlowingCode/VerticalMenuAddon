@@ -34,15 +34,13 @@ public class VerticalMenu extends Component implements HasSize {
 		Icon button = VaadinIcon.MENU.create();
 		button.addClassName("menu-btn");
 		button.getElement().setAttribute("onclick", "toggleMenu()");
-		button.getElement().addEventListener("click", ev->{
-			menuOpened = true;
-		});
+		button.getElement().addEventListener("click", ev->menuOpened = true);
 		this.getElement().appendChild(button.getElement());
 		int index = 1;
 		for (Section section : sections) {
 			addMenu(section, index++);
 		}
-		UI.getCurrent().getPage().executeJavaScript("goToPage(0)");
+		UI.getCurrent().getPage().executeJs("goToPage(0)");
 	}
 
 	@Override
