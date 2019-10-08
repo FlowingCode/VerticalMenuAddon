@@ -1,4 +1,7 @@
-/.project
 /.settings
 /target
 /.classpath
+/.project
+/node_modules
+/webpack.generated.js
+/node

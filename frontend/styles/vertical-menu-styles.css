@@ -1,0 +1,197 @@
+* {
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.vertical-menu {
+  background: #1f252d;
+}
+
+.vertical-menu .wrapper {
+  height: 1000px;
+  background: #2e394b;
+  overflow: hidden;
+  position: relative;
+}
+
+.vertical-menu .menu-btn {
+  position: absolute;
+  z-index: 10;
+  top: 24px;
+  left: 17px;
+  cursor: pointer;
+  background-size: 44px;
+  color: white;
+}
+
+.vertical-menu .menu-btn:active {
+  opacity: 0.2;
+}
+
+.vertical-menu section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+  -webkit-transition: -webkit-transform 0.3s;
+}
+
+.vertical-menu section.class1 {
+  background: #f75b5b;
+  -webkit-transition-delay: 0s;
+}
+.vertical-menu section.class2 {
+  background: #c84051;
+  -webkit-transition-delay: 0.05s;
+}
+.vertical-menu section.class3 {
+  background: #4f3462;
+  -webkit-transition-delay: 0.1s;
+}
+.vertical-menu section.class4 {
+  background: #794d9a;
+  -webkit-transition-delay: 0.15s;
+}
+.vertical-menu section.class5 {
+  background: #c84051;
+  -webkit-transition-delay: 0.20s;
+}
+.vertical-menu section.class6 {
+  background: #4f3462;
+  -webkit-transition-delay: 0.25s;
+}
+.vertical-menu section.after {
+  -webkit-transform: translateY(100%);
+}
+
+.vertical-menu h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 0;
+  line-height: 70px;
+  -webkit-user-select: none;
+}
+
+.page-one section.class1 {
+  -webkit-transition-delay: 0s;
+}
+.page-one section.class2 {
+  -webkit-transition-delay: 0.15s;
+}
+.page-one section.class3 {
+  -webkit-transition-delay: 0.1s;
+}
+.page-one section.class4 {
+  -webkit-transition-delay: 0.05s;
+}
+.page-one section.class5 {
+  -webkit-transition-delay: 0.05s;
+}
+.page-one section.class6 {
+  -webkit-transition-delay: 0.05s;
+}
+
+.page-two section.class1 {
+  -webkit-transition-delay: 0s;
+}
+.page-two section.class2 {
+  -webkit-transition-delay: 0.05s;
+}
+.page-two section.class3 {
+  -webkit-transition-delay: 0.1s;
+}
+.page-two section.class4 {
+  -webkit-transition-delay: 0.05s;
+}
+.page-two section.class5 {
+  -webkit-transition-delay: 0.05s;
+}
+.page-two section.class6 {
+  -webkit-transition-delay: 0.05s;
+}
+
+.menu-open section {
+  cursor: pointer;
+}
+.menu-open section.class1 {
+  -webkit-transform: translateY(70px);
+  -webkit-transition-delay: 0.15s;
+}
+.menu-open section.class1:active {
+  background: #f86a6a;
+}
+.menu-open section.class2 {
+  -webkit-transform: translateY(140px);
+  -webkit-transition-delay: 0.1s;
+}
+.menu-open section.class2:active {
+  background: #cb4c5c;
+}
+.menu-open section.class3 {
+  -webkit-transform: translateY(210px);
+  -webkit-transition-delay: 0.05s;
+}
+.menu-open section.class3:active {
+  background: #57396c;
+}
+.menu-open section.class4 {
+  -webkit-transform: translateY(280px);
+  -webkit-transition-delay: 0s;
+}
+.menu-open section.class4:active {
+  background: #8152a4;
+}
+.menu-open section.class5 {
+  -webkit-transform: translateY(350px);
+  -webkit-transition-delay: 0s;
+}
+.menu-open section.class5:active {
+  background: #8152a4;
+}
+.menu-open section.class6 {
+  -webkit-transform: translateY(420px);
+  -webkit-transition-delay: 0s;
+}
+.menu-open section.class6:active {
+  background: #8152a4;
+}
+.menu-open.page-one section.class1 {
+  -webkit-transition-delay: 0s;
+}
+.menu-open.page-one section.class2 {
+  -webkit-transition-delay: 0.05s;
+}
+.menu-open.page-one section.class3 {
+  -webkit-transition-delay: 0.1s;
+}
+.menu-open.page-one section.class4 {
+  -webkit-transition-delay: 0.15s;
+}
+.menu-open.page-one section.class5 {
+  -webkit-transition-delay: 0.15s;
+}
+.menu-open.page-one section.class6 {
+  -webkit-transition-delay: 0.15s;
+}
+.menu-open.page-two section.class1 {
+  -webkit-transition-delay: 0s;
+}
+.menu-open.page-two section.class2 {
+  -webkit-transition-delay: 0.05s;
+}
+.menu-open.page-two section.class3 {
+  -webkit-transition-delay: 0.1s;
+}
+.menu-open.page-two section.class4 {
+  -webkit-transition-delay: 0.15s;
+}
+.menu-open.page-two section.class5 {
+  -webkit-transition-delay: 0.15s;
+}
+.menu-open.page-two section.class6 {
+  -webkit-transition-delay: 0.15s;
+}

@@ -6,7 +6,7 @@ Colorful vertical menu for Vaadin 10 based on https://codepen.io/iamturner/pen/R
 
 ## Online demo
 
-[Online demo here](http://addonsv10.flowingcode.com/vertical-menu)
+[Online demo here](http://addonsv14.flowingcode.com/vertical-menu)
 
 ## Building and running demo
 
@@ -17,6 +17,7 @@ To see the demo, navigate to http://localhost:8080/
 
 ## Release notes
 
+- **Version 2.0.0** Support for Vaadin 14 NPM mode
 - **Version 1.0.0** Initial Version
 
 ## Issue tracking
