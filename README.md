@@ -2,7 +2,7 @@
 
 # Vertical Menu Addon
 
-Colorful vertical menu for Vaadin 10 based on https://codepen.io/iamturner/pen/RaqoPX
+Colorful vertical menu for Vaadin 10+ based on https://codepen.io/iamturner/pen/RaqoPX
 
 ## Online demo
 
