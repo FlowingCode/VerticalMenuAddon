@@ -20,7 +20,6 @@
 package com.flowingcode.vaadin.addons.verticalmenu;
 
 import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Section;
 import com.vaadin.flow.component.notification.Notification;
@@ -30,25 +29,22 @@ import com.vaadin.flow.router.Route;
 
 @Route("")
 @SuppressWarnings("serial")
-public class DemoView extends Div {
-	
+public class DemoView extends VerticalMenu {
+
 	public DemoView() {
-		this.setSizeFull();
-		Section inbox = new Section(new H1("Inbox"),createDummyInbox());
-		inbox.getStyle().set("background-color", "green");
-		VerticalMenu vm = new VerticalMenu(inbox,
-										   new Section(new H1("Profile")),
-										   new Section(new H1("Friends")),
-										   new Section(new H1("Messages")),
-										   new Section(new H1("Settings")));
-		vm.addMenuSelectedListener(ev->{
+		super(new Section(new H1("Inbox"),createDummyInbox()),
+			   new Section(new H1("Profile")),
+			   new Section(new H1("Friends")),
+			   new Section(new H1("Messages")),
+			   new Section(new H1("Settings")));
+		getSections().get(0).getStyle().set("background-color", "green");
+		reloadSections();
+		addMenuSelectedListener(ev->{
 			Notification.show("Section: " + ev.getSource().getElement().getChild(0).getText() + " clicked.");
 		});
-		vm.setSizeFull();
-		this.add(vm);
 	}
 
-	private VerticalLayout createDummyInbox() {
+	private static VerticalLayout createDummyInbox() {
 		VerticalLayout vl = new VerticalLayout();
 		vl.setHeight("calc(100% - 110px)");
 		vl.setWidth("100vv");
