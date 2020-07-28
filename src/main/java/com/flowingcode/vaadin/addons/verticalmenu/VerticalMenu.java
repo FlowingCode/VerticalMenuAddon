@@ -26,7 +26,7 @@ import com.vaadin.flow.shared.Registration;
  */
 @Tag("div")
 @SuppressWarnings("serial")
-@StyleSheet("./styles/vertical-menu-styles.css")
+@StyleSheet("context://frontend/styles/vertical-menu-styles.css")
 @JavaScript("./scripts/vertical-menu-styles.js")
 public class VerticalMenu extends Component implements HasSize {
 
