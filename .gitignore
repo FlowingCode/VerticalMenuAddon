@@ -6,3 +6,8 @@
 /webpack.generated.js
 /node
 /webpack.config.js
+/package.json
+/pnpm-lock.yaml
+/pnpmfile.js
+/tsconfig.json
+/types.d.ts
