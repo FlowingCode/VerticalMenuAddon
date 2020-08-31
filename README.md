@@ -16,7 +16,7 @@ Colorful vertical menu for Vaadin 10+ based on https://codepen.io/iamturner/pen/
 To see the demo, navigate to http://localhost:8080/
 
 ## Release notes
-
+- **Version 2.0.2** Fix compatibility [issue](https://github.com/FlowingCode/VerticalMenuAddon/issues/3) with Vaadin 16.
 - **Version 2.0.1** Support for modifying sections dynamically and fixed [issue #1](https://github.com/FlowingCode/VerticalMenuAddon/issues/1)
 - **Version 2.0.0** Support for Vaadin 14 NPM mode
 - **Version 1.0.0** Initial Version
