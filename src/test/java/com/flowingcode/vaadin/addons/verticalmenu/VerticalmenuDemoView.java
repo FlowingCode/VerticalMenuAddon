@@ -28,7 +28,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "verticalmenu", layout = DemoLayout.class)
+@Route(value = "vertical-menu", layout = DemoLayout.class)
 @SuppressWarnings("serial")
 public class VerticalmenuDemoView extends VerticalMenu {
 
