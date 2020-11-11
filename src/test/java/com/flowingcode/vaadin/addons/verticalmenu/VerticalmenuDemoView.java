@@ -20,6 +20,7 @@
 package com.flowingcode.vaadin.addons.verticalmenu;
 
 import com.flowingcode.vaadin.addons.DemoLayout;
+import com.flowingcode.vaadin.addons.GithubLink;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Section;
@@ -30,6 +31,7 @@ import com.vaadin.flow.router.Route;
 
 @Route(value = "vertical-menu", layout = DemoLayout.class)
 @SuppressWarnings("serial")
+@GithubLink("https://github.com/FlowingCode/VerticalMenuAddon")
 public class VerticalmenuDemoView extends VerticalMenu {
 
 	public VerticalmenuDemoView() {
