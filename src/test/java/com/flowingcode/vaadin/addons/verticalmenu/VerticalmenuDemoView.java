@@ -7,9 +7,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -58,7 +58,7 @@ public class VerticalmenuDemoView extends VerticalMenu {
 		g.addColumn(item -> item).setHeader("Subject");
 		g.addColumn(item -> item).setHeader("From");
 		g.addColumn(item -> item).setHeader("Date");
-        g.setDataProvider(new ListDataProvider<>(Arrays.asList("Item 1", "Item 1", "Item 1",
+		g.setDataProvider(new ListDataProvider<>(Arrays.asList("Item 1", "Item 1", "Item 1",
             "Item 1", "Item 1", "Item 1", "Item 1", "Item 1", "Item 1", "Item 1")));
 		vl.add(g);
 		vl.setMargin(true);
