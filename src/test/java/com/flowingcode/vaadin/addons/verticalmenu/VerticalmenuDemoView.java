@@ -27,7 +27,9 @@ import com.vaadin.flow.component.html.Section;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.data.provider.ListDataProvider;
 import com.vaadin.flow.router.Route;
+import java.util.Arrays;
 
 @Route(value = "vertical-menu", layout = DemoLayout.class)
 @SuppressWarnings("serial")
@@ -56,7 +58,8 @@ public class VerticalmenuDemoView extends VerticalMenu {
 		g.addColumn(item -> item).setHeader("Subject");
 		g.addColumn(item -> item).setHeader("From");
 		g.addColumn(item -> item).setHeader("Date");
-		g.setItems("Item 1", "Item 1", "Item 1", "Item 1", "Item 1", "Item 1", "Item 1", "Item 1", "Item 1", "Item 1");
+		g.setDataProvider(new ListDataProvider<>(Arrays.asList("Item 1", "Item 1", "Item 1",
+            "Item 1", "Item 1", "Item 1", "Item 1", "Item 1", "Item 1", "Item 1")));
 		vl.add(g);
 		vl.setMargin(true);
 		vl.setSpacing(false);
