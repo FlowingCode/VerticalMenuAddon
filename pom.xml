@@ -36,6 +36,23 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    
+    <repositories>
+    	<repository>
+			<id>FlowingCode Releases</id>
+			<url>https://maven.flowingcode.com/releases</url>
+		</repository>
+		<repository>
+			<id>FlowingCode Snapshots</id>
+			<url>https://maven.flowingcode.com/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+    </repositories>
 	
     <dependencyManagement>
         <dependencies>
