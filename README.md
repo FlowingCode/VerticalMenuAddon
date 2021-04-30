@@ -8,6 +8,10 @@ Colorful vertical menu for Vaadin 10+ based on https://codepen.io/iamturner/pen/
 
 [Online demo here](http://addonsv14.flowingcode.com/vertical-menu)
 
+## Download release
+
+Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to https://vaadin.com/directory/component/vertical-menu-addon
+
 ## Building and running demo
 
 - git clone repository
