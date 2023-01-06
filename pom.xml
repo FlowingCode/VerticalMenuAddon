@@ -353,5 +353,15 @@
 				</plugins>
 			</build>
 		</profile>
+		
+		<profile>
+			<id>v23</id>
+			<properties>
+				<maven.compiler.source>11</maven.compiler.source>
+				<maven.compiler.target>11</maven.compiler.target>
+				<vaadin.version>23.3.2</vaadin.version>
+			</properties>
+		</profile>
+		
     </profiles>
 </project>
