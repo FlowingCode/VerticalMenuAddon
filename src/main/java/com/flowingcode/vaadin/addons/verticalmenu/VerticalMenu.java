@@ -8,6 +8,7 @@ import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.DetachEvent;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.UI;
@@ -61,16 +62,22 @@ public class VerticalMenu extends Component implements HasSize {
 		getUI().ifPresent(ui -> ui.getElement().getClassList().add("vertical-menu"));
 	}
 
+    @Override
+    protected void onDetach(DetachEvent detachEvent) {
+      getUI().ifPresent(ui -> ui.getElement().getClassList().remove("vertical-menu"));
+      super.onDetach(detachEvent);
+    }
+
 	private void addMenu(Section s, int index) {
 		s.getElement().setAttribute("onclick", "goToPage(" + (index - 1) + ")");
 		s.addClassName("class" + index);
 		s.addClickListener(ev -> {
 			if (menuOpened) {
-				fireEvent(new MenuSelectedEvent((Section) ev.getSource(), true));
+				fireEvent(new MenuSelectedEvent(ev.getSource(), true));
 				menuOpened = false;
 			}
 		});
-		this.getElement().appendChild(s.getElement());
+		getElement().appendChild(s.getElement());
 	}
 
 	public Registration addMenuSelectedListener(ComponentEventListener<MenuSelectedEvent> listener) {
@@ -91,5 +98,5 @@ public class VerticalMenu extends Component implements HasSize {
 			super(source, fromClient);
 		}
 	}
-	
+
 }
