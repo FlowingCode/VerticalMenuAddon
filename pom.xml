@@ -24,6 +24,14 @@
         <tag>HEAD</tag>
     </scm>
 
+    <developers>
+	<developer>
+	    <id>flowingcode</id>
+	    <organization>Flowing Code</organization>
+	    <organizationUrl>https://www.flowingcode.com</organizationUrl>
+	</developer>
+    </developers>
+	
     <organization>
 	   <name>Flowing Code</name>
 	   <url>https://www.flowingcode.com</url>
