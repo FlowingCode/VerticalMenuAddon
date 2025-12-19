@@ -53,10 +53,6 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-    	<repository>
-			<id>FlowingCode Releases</id>
-			<url>https://maven.flowingcode.com/releases</url>
-		</repository>
     </repositories>
 	
     <dependencyManagement>
