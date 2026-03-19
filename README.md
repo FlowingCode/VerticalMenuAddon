@@ -5,6 +5,10 @@
 
 Colorful vertical menu for Vaadin 10+ based on https://codepen.io/iamturner/pen/RaqoPX
 
+## Supported versions
+
+Supported versions: Vaadin 14-24 (add-on version 2.x)
+
 ## Online demo
 
 [Online demo here](http://addonsv14.flowingcode.com/vertical-menu)
