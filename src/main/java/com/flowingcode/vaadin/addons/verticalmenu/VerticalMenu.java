@@ -49,7 +49,7 @@ import com.vaadin.flow.shared.Registration;
  */
 @Tag("div")
 @SuppressWarnings("serial")
-@StyleSheet("context://frontend/styles/vertical-menu-styles.css")
+@StyleSheet("context://styles/vertical-menu-styles.css")
 @JavaScript("./scripts/vertical-menu-styles.js")
 public class VerticalMenu extends Component implements HasSize {
 
