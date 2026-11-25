@@ -1,21 +1,54 @@
+[![Published on Vaadin Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/vertical-menu-addon)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/vertical-menu-addon.svg)](https://vaadin.com/directory/component/vertical-menu-addon)
 [![Build Status](https://jenkins.flowingcode.com/job/VerticalMenu-addon/badge/icon)](https://jenkins.flowingcode.com/job/VerticalMenu-addon)
+[![Vaadin Directory](https://img.shields.io/vaadin-directory/v/vertical-menu-addon)](https://vaadin.com/directory/component/vertical-menu-addon)
 [![Javadoc](https://img.shields.io/badge/javadoc-00b4f0)](https://javadoc.flowingcode.com/artifact/com.flowingcode.addons/vertical-menu)
 
 # Vertical Menu Addon
 
 Colorful vertical menu for Vaadin 10+ based on https://codepen.io/iamturner/pen/RaqoPX
 
+## Features
+
+* Full-page sections, one shown at a time, with a menu button that displays all of them as a colorful vertical menu
+* Each section is a `Section` component, so it can contain any content
+* Up to six sections, each one with its own color
+* Listener notified when a section is selected from the menu
+* Sections can be modified dynamically
+
 ## Supported versions
 
-Supported versions: Vaadin 14-24 (add-on version 2.x)
+Supported versions: Vaadin 14-25 (add-on version 2.x)
 
 ## Online demo
 
-[Online demo here](http://addonsv14.flowingcode.com/vertical-menu)
+[Online demo here](https://addonsv25.flowingcode.com/vertical-menu)
 
 ## Download release
 
-Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to https://vaadin.com/directory/component/vertical-menu-addon
+[Available in Vaadin Directory](https://vaadin.com/directory/component/vertical-menu-addon)
+
+### Maven install
+
+Add the following dependencies in your pom.xml file:
+
+```xml
+<dependency>
+   <groupId>com.flowingcode.addons</groupId>
+   <artifactId>vertical-menu</artifactId>
+   <version>X.Y.Z</version>
+</dependency>
+```
+<!-- the above dependency should be updated with latest released version information -->
+
+```xml
+<repository>
+   <id>vaadin-addons</id>
+   <url>https://maven.vaadin.com/vaadin-addons</url>
+</repository>
+```
+
+For SNAPSHOT versions see [here](https://maven.flowingcode.com/snapshots/).
 
 ## Building and running demo
 
@@ -25,10 +58,8 @@ Official releases of this add-on are available at Vaadin Directory. For Maven in
 To see the demo, navigate to http://localhost:8080/
 
 ## Release notes
-- **Version 2.0.2** Fix compatibility [issue](https://github.com/FlowingCode/VerticalMenuAddon/issues/3) with Vaadin 16.
-- **Version 2.0.1** Support for modifying sections dynamically and fixed [issue #1](https://github.com/FlowingCode/VerticalMenuAddon/issues/1)
-- **Version 2.0.0** Support for Vaadin 14 NPM mode
-- **Version 1.0.0** Initial Version
+
+See [here](https://github.com/FlowingCode/VerticalMenuAddon/releases)
 
 ## Issue tracking
 
@@ -70,23 +101,41 @@ This add-on is distributed under Apache License 2.0. For license terms, see LICE
 
 VerticalMenu Addon is written by Flowing Code S.A.
 
-
 # Developer Guide
 
 ## Using the component
 
 - Basic usage
+```java
+VerticalMenu vm = new VerticalMenu(
+    new Section(new H1("Inbox")),
+    new Section(new H1("Profile")),
+    new Section(new H1("Friends")),
+    new Section(new H1("Messages")),
+    new Section(new H1("Settings")));
 ```
-		VerticalMenu vm = new VerticalMenu(new Section(new H1("Inbox"),
-										   new Section(new H1("Profile")),
-										   new Section(new H1("Friends")),
-										   new Section(new H1("Messages")),
-										   new Section(new H1("Settings")));
+
+- Menu selected listener
+```java
+vm.addMenuSelectedListener(ev -> {
+  Notification.show("Section: " + ev.getSource().getElement().getChild(0).getText() + " clicked.");
+});
+```
+
+- Modifying the sections
+```java
+vm.getSections().get(0).getStyle().set("background-color", "green");
+vm.reloadSections();
+```
+
+## Special configuration when using Spring
+
+By default, Vaadin Flow only includes `com/vaadin/flow/component` to be always scanned for UI components and views. For this reason, the add-on might need to be allowed in order to display correctly. 
+
+To do so, just add `com.flowingcode` to the `vaadin.allowed-packages` property in `src/main/resources/application.properties`, like:
 
 ```
-- Menu selected listener
+vaadin.allowed-packages = com.vaadin,org.vaadin,dev.hilla,com.flowingcode
 ```
-		vm.addMenuSelectedListener(ev->{
-			Notification.show("Section: " + ev.getSource().getElement().getChild(0).getText() + " clicked.");
-		});
-```
+ 
+More information on Spring scanning configuration [here](https://vaadin.com/docs/latest/integrations/spring/configuration/#configure-the-scanning-of-packages).
